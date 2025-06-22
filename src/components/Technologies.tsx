@@ -18,7 +18,9 @@ const Technologies = () => {
         "Non-invasive treatment"
       ],
       gradient: "from-purple-500 to-blue-600",
-      bgGradient: "from-purple-50 to-blue-50"
+      bgGradient: "from-purple-50 to-blue-50",
+      hasImage: true,
+      imageUrl: "/lovable-uploads/fc069f6c-d1b8-4276-8d5a-570f45a297cd.png"
     },
     {
       icon: Activity,
@@ -129,9 +131,19 @@ const Technologies = () => {
                     
                     {/* Image/Visual Side */}
                     <div className={`bg-gradient-to-br ${tech.gradient} flex items-center justify-center p-8 lg:p-12 min-h-[400px] ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                      <div className="w-48 h-48 lg:w-64 lg:h-64 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                        <tech.icon className="h-24 w-24 lg:h-32 lg:w-32 text-white" />
-                      </div>
+                      {tech.hasImage ? (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <img 
+                            src={tech.imageUrl} 
+                            alt={tech.name}
+                            className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-48 h-48 lg:w-64 lg:h-64 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                          <tech.icon className="h-24 w-24 lg:h-32 lg:w-32 text-white" />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </CardContent>
