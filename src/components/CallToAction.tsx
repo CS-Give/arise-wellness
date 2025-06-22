@@ -94,7 +94,7 @@ const CallToAction = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold">Phone</p>
-                    <p className="text-blue-100">(555) 123-4567</p>
+                    <p className="text-blue-100">952-522-6344</p>
                   </div>
                 </div>
                 
