@@ -114,7 +114,7 @@ const CallToAction = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold">Location</p>
-                    <p className="text-blue-100">123 Wellness Way<br />Suite 100, City, State 12345</p>
+                    <p className="text-blue-100">7447 Egan Drive<br />Suite 207, Savage, MN 55378</p>
                   </div>
                 </div>
                 

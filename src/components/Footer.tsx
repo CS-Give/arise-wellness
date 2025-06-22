@@ -48,7 +48,7 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 text-slate-400 mr-2 flex-shrink-0" />
-                  <span className="text-slate-300 text-sm">123 Wellness Way, Suite 100<br />City, State 12345</span>
+                  <span className="text-slate-300 text-sm">7447 Egan Drive, Suite 207<br />Savage, MN 55378</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-4 w-4 text-slate-400 mr-2" />
