@@ -35,7 +35,9 @@ const Technologies = () => {
         "Immediate results"
       ],
       gradient: "from-teal-500 to-green-600",
-      bgGradient: "from-teal-50 to-green-50"
+      bgGradient: "from-teal-50 to-green-50",
+      hasImage: true,
+      imageUrl: "/lovable-uploads/be0bfaf1-3813-4f2a-8ce7-8ae3d4c39040.png"
     },
     {
       icon: Zap,
