@@ -52,7 +52,9 @@ const Technologies = () => {
         "Visible results in weeks"
       ],
       gradient: "from-orange-500 to-red-600",
-      bgGradient: "from-orange-50 to-red-50"
+      bgGradient: "from-orange-50 to-red-50",
+      hasImage: true,
+      imageUrl: "/lovable-uploads/2d5a883c-5ec8-4bca-ba33-2f026b36d978.png"
     }
   ];
 
