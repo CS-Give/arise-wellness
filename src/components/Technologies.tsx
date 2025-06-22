@@ -52,6 +52,26 @@ const Technologies = () => {
     }
   ];
 
+  const handleLearnMore = (technologyName: string) => {
+    // Scroll to the Call to Action section where users can book a consultation
+    const callToActionSection = document.querySelector('section[class*="from-blue-600"]');
+    if (callToActionSection) {
+      callToActionSection.scrollIntoView({ behavior: 'smooth' });
+      
+      // Optional: You could also pre-select the treatment in the form
+      const treatmentSelect = document.querySelector('select') as HTMLSelectElement;
+      if (treatmentSelect) {
+        const optionValue = technologyName.toLowerCase().replace(' ', '');
+        const option = Array.from(treatmentSelect.options).find(opt => 
+          opt.value.includes(optionValue.substring(0, 7))
+        );
+        if (option) {
+          treatmentSelect.value = option.value;
+        }
+      }
+    }
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
       <div className="container mx-auto px-6">
@@ -98,7 +118,10 @@ const Technologies = () => {
                         ))}
                       </ul>
                       
-                      <Button className={`bg-gradient-to-r ${tech.gradient} hover:opacity-90 text-white self-start px-6 py-3 rounded-full font-semibold transition-all duration-300`}>
+                      <Button 
+                        onClick={() => handleLearnMore(tech.name)}
+                        className={`bg-gradient-to-r ${tech.gradient} hover:opacity-90 text-white self-start px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer`}
+                      >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
