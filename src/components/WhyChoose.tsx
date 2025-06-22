@@ -26,30 +26,30 @@ const WhyChoose = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 px-2">
               Why Choose Arise Medical & Wellness?
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto mb-8"></div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
               We combine cutting-edge technology with compassionate care to deliver exceptional results 
               in a comfortable, professional environment.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-2">
             {reasons.map((reason, index) => (
-              <div key={reason.title} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-shadow duration-300">
-                  <reason.icon className="h-10 w-10 text-blue-600" />
+              <div key={reason.title} className="text-center group hover:transform hover:scale-105 transition-all duration-300 p-4">
+                <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:shadow-lg transition-shadow duration-300">
+                  <reason.icon className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 sm:mb-4">
                   {reason.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                   {reason.description}
                 </p>
               </div>
