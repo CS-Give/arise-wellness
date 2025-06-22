@@ -1,159 +1,80 @@
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Brain, Activity, Zap, ArrowRight } from "lucide-react";
+import { Zap, Shield, Heart, Users } from "lucide-react";
 
 const Technologies = () => {
   const technologies = [
     {
-      icon: Brain,
-      name: "ExoMind",
-      subtitle: "Neurostimulation Technology",
-      description: "Advanced brain optimization through targeted neurostimulation. Enhance cognitive function, improve focus, elevate mood, and optimize mental performance with our cutting-edge ExoMind technology.",
-      benefits: [
-        "Enhanced cognitive function",
-        "Improved focus and concentration", 
-        "Mood enhancement and stress reduction",
-        "Optimized brain performance",
-        "Non-invasive treatment"
-      ],
-      gradient: "from-purple-500 to-blue-600",
-      bgGradient: "from-purple-50 to-blue-50",
-      hasImage: true,
-      imageUrl: "/lovable-uploads/fc069f6c-d1b8-4276-8d5a-570f45a297cd.png"
-    },
-    {
-      icon: Activity,
-      name: "Emsella Chair",
-      subtitle: "Pelvic Floor Strengthening",
-      description: "Revolutionary non-invasive solution for pelvic floor strengthening. The Emsella Chair provides effective treatment for incontinence and pelvic floor dysfunction through electromagnetic stimulation.",
-      benefits: [
-        "Strengthens pelvic floor muscles",
-        "Treats urinary incontinence",
-        "Non-invasive and comfortable",
-        "Fully clothed treatment",
-        "Immediate results"
-      ],
-      gradient: "from-teal-500 to-green-600",
-      bgGradient: "from-teal-50 to-green-50",
-      hasImage: true,
-      imageUrl: "/lovable-uploads/be0bfaf1-3813-4f2a-8ce7-8ae3d4c39040.png"
-    },
-    {
+      title: "Emsculpt NEO",
+      subtitle: "Build Muscle & Burn Fat",
+      description: "Revolutionary technology that simultaneously builds muscle and burns fat using HIFEM+ and radiofrequency energy.",
+      features: ["30% fat reduction", "25% muscle increase", "Non-invasive", "No downtime"],
+      image: "/lovable-uploads/2d5a883c-5ec8-4bca-ba33-2f026b36d978.png",
       icon: Zap,
-      name: "Emsculpt NEO",
-      subtitle: "Body Contouring Technology",
-      description: "The ultimate body contouring solution combining muscle building and fat reduction. Emsculpt NEO simultaneously burns fat and builds muscle for comprehensive body transformation.",
-      benefits: [
-        "Builds muscle and burns fat",
-        "Non-surgical body contouring",
-        "Targets multiple areas",
-        "FDA-cleared technology",
-        "Visible results in weeks"
-      ],
-      gradient: "from-orange-500 to-red-600",
-      bgGradient: "from-orange-50 to-red-50",
-      hasImage: true,
-      imageUrl: "/lovable-uploads/2d5a883c-5ec8-4bca-ba33-2f026b36d978.png"
+      gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "CoolSculpting",
+      subtitle: "Freeze Away Fat",
+      description: "FDA-cleared fat freezing technology that permanently eliminates stubborn fat cells through controlled cooling.",
+      features: ["Permanent fat reduction", "No surgery required", "Minimal discomfort", "Proven results"],
+      image: "/lovable-uploads/be0bfaf1-3813-4f2a-8ce7-8ae3d4c39040.png",
+      icon: Shield,
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "IV Therapy",
+      subtitle: "Immediate Wellness Boost",
+      description: "Customized intravenous vitamin and nutrient therapy for enhanced energy, immunity, and overall wellness.",
+      features: ["Custom formulations", "Immediate absorption", "Enhanced energy", "Immune support"],
+      image: "/lovable-uploads/fc069f6c-d1b8-4276-8d5a-570f45a297cd.png",
+      icon: Heart,
+      gradient: "from-green-500 to-emerald-500"
     }
   ];
 
-  const handleLearnMore = (technologyName: string) => {
-    // Scroll to the Call to Action section where users can book a consultation
-    const callToActionSection = document.querySelector('section[class*="from-blue-600"]');
-    if (callToActionSection) {
-      callToActionSection.scrollIntoView({ behavior: 'smooth' });
-      
-      // Optional: You could also pre-select the treatment in the form
-      const treatmentSelect = document.querySelector('select') as HTMLSelectElement;
-      if (treatmentSelect) {
-        const optionValue = technologyName.toLowerCase().replace(' ', '');
-        const option = Array.from(treatmentSelect.options).find(opt => 
-          opt.value.includes(optionValue.substring(0, 7))
-        );
-        if (option) {
-          treatmentSelect.value = option.value;
-        }
-      }
-    }
-  };
-
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+    <section id="technologies" className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Revolutionary Technologies
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto mb-8"></div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Experience the future of wellness with our advanced, FDA-cleared technologies 
-              designed to optimize your body and mind for peak performance.
-            </p>
-          </div>
-          
-          <div className="space-y-8">
-            {technologies.map((tech, index) => (
-              <Card key={tech.name} className={`overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-gradient-to-r ${tech.bgGradient}`}>
-                <CardContent className="p-0">
-                  <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                    {/* Content Side */}
-                    <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                      <div className={`w-16 h-16 bg-gradient-to-r ${tech.gradient} rounded-full flex items-center justify-center mb-6`}>
-                        <tech.icon className="h-8 w-8 text-white" />
-                      </div>
-                      
-                      <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
-                        {tech.name}
-                      </h3>
-                      <p className={`text-lg font-medium bg-gradient-to-r ${tech.gradient} bg-clip-text text-transparent mb-4`}>
-                        {tech.subtitle}
-                      </p>
-                      
-                      <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                        {tech.description}
-                      </p>
-                      
-                      <ul className="space-y-3 mb-8">
-                        {tech.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-slate-700">
-                            <div className={`w-2 h-2 bg-gradient-to-r ${tech.gradient} rounded-full mr-3`}></div>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                      
-                      <Button 
-                        onClick={() => handleLearnMore(tech.name)}
-                        className={`bg-gradient-to-r ${tech.gradient} hover:opacity-90 text-white self-start px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer`}
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
-                    
-                    {/* Image/Visual Side */}
-                    <div className={`bg-gradient-to-br ${tech.gradient} flex items-center justify-center p-8 lg:p-12 min-h-[400px] ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                      {tech.hasImage ? (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <img 
-                            src={tech.imageUrl} 
-                            alt={tech.name}
-                            className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-48 h-48 lg:w-64 lg:h-64 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                          <tech.icon className="h-24 w-24 lg:h-32 lg:w-32 text-white" />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            Our Cutting-Edge Technologies
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto mb-8"></div>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            We utilize the most advanced, FDA-cleared technologies to provide safe, effective, and personalized wellness solutions.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {technologies.map((tech, index) => (
+            <div key={tech.title} className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative">
+                <img
+                  src={tech.image}
+                  alt={tech.title}
+                  className="w-full h-56 object-cover"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-tr ${tech.gradient} opacity-20`}></div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <tech.icon className="h-6 w-6 text-blue-600 mr-2" />
+                  <h3 className="text-2xl font-bold text-slate-900">{tech.title}</h3>
+                </div>
+                <h4 className="text-lg font-semibold text-slate-700 mb-2">{tech.subtitle}</h4>
+                <p className="text-slate-600 leading-relaxed mb-4">{tech.description}</p>
+                <ul>
+                  {tech.features.map((feature, i) => (
+                    <li key={i} className="text-sm text-slate-500 flex items-center mb-1">
+                      <svg className="h-4 w-4 mr-1 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
