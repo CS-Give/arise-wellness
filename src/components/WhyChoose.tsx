@@ -55,30 +55,6 @@ const WhyChoose = () => {
               </div>
             ))}
           </div>
-          
-          {/* Stats Section */}
-          <div className="mt-16 pt-16 border-t border-slate-200">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-2">
-                  500+
-                </div>
-                <p className="text-slate-600 font-medium">Satisfied Patients</p>
-              </div>
-              <div>
-                <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-2">
-                  98%
-                </div>
-                <p className="text-slate-600 font-medium">Success Rate</p>
-              </div>
-              <div>
-                <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-2">
-                  5+
-                </div>
-                <p className="text-slate-600 font-medium">Years Experience</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
