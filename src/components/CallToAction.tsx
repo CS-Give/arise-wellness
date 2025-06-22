@@ -104,7 +104,7 @@ const CallToAction = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold">Email</p>
-                    <p className="text-blue-100">info@arisemedicalwellness.com</p>
+                    <p className="text-blue-100">info@arisewellnessmed.com</p>
                   </div>
                 </div>
                 
