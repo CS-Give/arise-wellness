@@ -3,6 +3,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
+  const handleBookConsultation = () => {
+    const callToActionSection = document.querySelector('section[class*="from-blue-600"]');
+    if (callToActionSection) {
+      callToActionSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleExploreServices = () => {
+    const technologiesSection = document.querySelector('section[class*="bg-gradient-to-br from-slate-50"]');
+    if (technologiesSection) {
+      technologiesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-slate-50 overflow-hidden">
       {/* Background Pattern */}
@@ -35,6 +49,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <Button 
+              onClick={handleBookConsultation}
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
@@ -42,6 +57,7 @@ const Hero = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
+              onClick={handleExploreServices}
               variant="outline" 
               size="lg"
               className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300"
