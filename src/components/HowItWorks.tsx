@@ -8,7 +8,7 @@ const HowItWorks = () => {
       icon: Clock,
       title: "No Downtime",
       description: "Our treatments require no recovery time, allowing you to return to your daily activities immediately after each session.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+      image: "/lovable-uploads/no-downtime-clock.jpg"
     },
     {
       icon: Target,
@@ -20,7 +20,7 @@ const HowItWorks = () => {
       icon: Zap,
       title: "Fast Treatment",
       description: "Each treatment session is quick and efficient, typically lasting just 20-30 minutes for optimal convenience.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop"
+      image: "/lovable-uploads/fast-treatment-timer.jpg"
     },
     {
       icon: TrendingUp,
