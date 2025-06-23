@@ -1,13 +1,13 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Zap, Target, TrendingUp } from "lucide-react";
+import { Clock, Zap, Target, TrendingUp } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: Brain,
-      title: "Advanced Brain Mapping",
-      description: "Our sophisticated technology analyzes your unique brainwave patterns to identify areas for optimization and treatment.",
+      icon: Clock,
+      title: "No Downtime",
+      description: "Our treatments require no recovery time, allowing you to return to your daily activities immediately after each session.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
     },
     {
@@ -18,8 +18,8 @@ const HowItWorks = () => {
     },
     {
       icon: Zap,
-      title: "Neural Pathway Enhancement",
-      description: "The treatment promotes neuroplasticity, strengthening beneficial neural connections and improving brain function.",
+      title: "Fast Treatment",
+      description: "Each treatment session is quick and efficient, typically lasting just 20-30 minutes for optimal convenience.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop"
     },
     {
