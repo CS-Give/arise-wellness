@@ -1,4 +1,3 @@
-
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -9,11 +8,18 @@ const Footer = () => {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Logo and Description */}
             <div className="col-span-1 md:col-span-2">
-              <img 
-                src="/lovable-uploads/e7e87c24-7f36-4498-9ef7-38d7a226dd27.png" 
-                alt="Arise Medical & Wellness"
-                className="h-16 w-auto mb-4 filter brightness-0 invert"
-              />
+              <a 
+                href="https://arisewellnessmed.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block mb-4 hover:opacity-80 transition-opacity duration-300"
+              >
+                <img 
+                  src="/lovable-uploads/e7e87c24-7f36-4498-9ef7-38d7a226dd27.png" 
+                  alt="Arise Medical & Wellness"
+                  className="h-16 w-auto filter brightness-0 invert"
+                />
+              </a>
               <p className="text-slate-300 leading-relaxed mb-6">
                 Arise Medical & Wellness is dedicated to elevating your health and wellness through 
                 innovative, non-invasive treatments that deliver real results.
