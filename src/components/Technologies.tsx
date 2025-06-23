@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Brain, Activity, Zap, ArrowRight } from "lucide-react";
+import { Brain, ArrowRight } from "lucide-react";
 
 const Technologies = () => {
   const technologies = [
@@ -21,40 +21,6 @@ const Technologies = () => {
       bgGradient: "from-purple-50 to-blue-50",
       hasImage: true,
       imageUrl: "/lovable-uploads/fc069f6c-d1b8-4276-8d5a-570f45a297cd.png"
-    },
-    {
-      icon: Activity,
-      name: "Emsella Chair",
-      subtitle: "Pelvic Floor Strengthening",
-      description: "Revolutionary non-invasive solution for pelvic floor strengthening. The Emsella Chair provides effective treatment for incontinence and pelvic floor dysfunction through electromagnetic stimulation.",
-      benefits: [
-        "Strengthens pelvic floor muscles",
-        "Treats urinary incontinence",
-        "Non-invasive and comfortable",
-        "Fully clothed treatment",
-        "Immediate results"
-      ],
-      gradient: "from-teal-500 to-green-600",
-      bgGradient: "from-teal-50 to-green-50",
-      hasImage: true,
-      imageUrl: "/lovable-uploads/be0bfaf1-3813-4f2a-8ce7-8ae3d4c39040.png"
-    },
-    {
-      icon: Zap,
-      name: "Emsculpt NEO",
-      subtitle: "Body Contouring Technology",
-      description: "The ultimate body contouring solution combining muscle building and fat reduction. Emsculpt NEO simultaneously burns fat and builds muscle for comprehensive body transformation.",
-      benefits: [
-        "Builds muscle and burns fat",
-        "Non-surgical body contouring",
-        "Targets multiple areas",
-        "FDA-cleared technology",
-        "Visible results in weeks"
-      ],
-      gradient: "from-orange-500 to-red-600",
-      bgGradient: "from-orange-50 to-red-50",
-      hasImage: true,
-      imageUrl: "/lovable-uploads/2d5a883c-5ec8-4bca-ba33-2f026b36d978.png"
     }
   ];
 
@@ -84,12 +50,12 @@ const Technologies = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 px-2">
-              Revolutionary Technologies
+              Revolutionary Technology
             </h2>
             <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto mb-6 sm:mb-8"></div>
             <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Experience the future of wellness with our advanced, FDA-cleared technologies 
-              designed to optimize your body and mind for peak performance.
+              Experience the future of wellness with our advanced, FDA-cleared technology 
+              designed to optimize your mind for peak performance.
             </p>
           </div>
           

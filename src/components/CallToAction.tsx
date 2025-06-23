@@ -18,7 +18,7 @@ const CallToAction = () => {
               Ready to Transform Your Wellness?
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Schedule your complimentary consultation today and discover how our advanced technologies 
+              Schedule your complimentary consultation today and discover how our advanced technology 
               can help you achieve your optimal health and wellness goals.
             </p>
           </div>
@@ -55,9 +55,6 @@ const CallToAction = () => {
                     <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                       <option value="">Select a treatment</option>
                       <option value="exomind">ExoMind</option>
-                      <option value="emsella">Emsella Chair</option>
-                      <option value="emsculpt">Emsculpt NEO</option>
-                      <option value="combination">Combination Treatment</option>
                       <option value="consultation">General Consultation</option>
                     </select>
                   </div>
