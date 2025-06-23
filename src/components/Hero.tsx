@@ -26,13 +26,20 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
           <header className="mb-6 sm:mb-8 animate-fade-in">
-            <img 
-              src="/lovable-uploads/e7e87c24-7f36-4498-9ef7-38d7a226dd27.png" 
-              alt="Arise Medical & Wellness - Advanced Wellness Technology"
-              className="mx-auto h-16 sm:h-20 md:h-24 lg:h-32 w-auto"
-              width="200"
-              height="128"
-            />
+            <a 
+              href="https://arisewellnessmed.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block hover:opacity-80 transition-opacity duration-300"
+            >
+              <img 
+                src="/lovable-uploads/e7e87c24-7f36-4498-9ef7-38d7a226dd27.png" 
+                alt="Arise Medical & Wellness - Advanced Wellness Technology"
+                className="mx-auto h-16 sm:h-20 md:h-24 lg:h-32 w-auto"
+                width="200"
+                height="128"
+              />
+            </a>
           </header>
           
           {/* Main Headline */}
