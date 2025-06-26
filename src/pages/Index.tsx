@@ -1,7 +1,6 @@
 
 import Hero from "@/components/Hero";
 import Technologies from "@/components/Technologies";
-import HowItWorks from "@/components/HowItWorks";
 import BenefitsSection from "@/components/BenefitsSection";
 import WhyChoose from "@/components/WhyChoose";
 import CallToAction from "@/components/CallToAction";
@@ -16,7 +15,6 @@ const Index = () => {
         <main role="main">
           <Hero />
           <Technologies />
-          <HowItWorks />
           <BenefitsSection />
           <WhyChoose />
           <CallToAction />

@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Brain, ArrowRight } from "lucide-react";
@@ -15,7 +14,9 @@ const Technologies = () => {
         "Improved focus and concentration", 
         "Mood enhancement and stress reduction",
         "Optimized brain performance",
-        "Non-invasive treatment"
+        "Non-invasive treatment",
+        "No Downtime",
+        "Fast Treatment"
       ],
       gradient: "from-purple-500 to-blue-600",
       bgGradient: "from-purple-50 to-blue-50",
